@@ -8,9 +8,11 @@ function  App() {
         .then((resp) => resp.json())
         .then((data) => {
             setDogPic(data.message);
-        })
+        });
     }, []);
+
     if (!dogPic) return <p>Loading...</p>
-    return <img src={dogPic} alt=" A random dog pic" />
+    
+    return <img src={dogPic} alt=" A Random Dog" />
 };
 export default App;
